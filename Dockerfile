@@ -3,7 +3,7 @@ FROM debian:jessie as builder
 MAINTAINER Dario <docker-dario@neomediatech.it>
 
 # install oracle client
-COPY /oracle-11/ /tmp/
+COPY /oracle-10/ /tmp/
 
 RUN apt-get update && \
     apt-get -y install unzip && \
