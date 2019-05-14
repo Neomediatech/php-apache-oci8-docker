@@ -4,6 +4,7 @@ Docker container for Apache + PHP + Oracle OCI8 Extension
 This installation make use of the very old 10.1.0.5 version of Instant Client package, because of a need to connect to a 10.1 Oracle database.
 
 apache.conf file contains this section:
+```
 <Directory /var/www/html>
   <Files report.php>
     AuthType Basic
@@ -13,6 +14,7 @@ apache.conf file contains this section:
     Require valid-user
   </Files>
 </Directory>
+```
 You can delete it if you don't need Basic authentication. But if you want to use it you need to put a ".pwd" file in /var/www/html container folder (or mount it with the -v option)
 
 ## Licensing
