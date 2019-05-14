@@ -3,6 +3,12 @@ Docker container for Apache + PHP + Oracle OCI8 Extension
 
 This installation make use of the very old 10.1.0.5 version of Instant Client package, because of a need to connect to a 10.1 Oracle database.
 
+## Build & Run
+1. Clone this repo (or dowlload the zipped file)
+2. Build with `docker build . -t php-oracle` (use whatever name you want instead of "php-oracle")
+3. Run with `docker run -p 10080:80 --name my-php-oracle -d php-oracle`. "my-php-oracle" is the container name, "php-oracle" is the image name just built.
+
+## Notes
 apache.conf file contains this section:
 ```
 <Directory /var/www/html>
