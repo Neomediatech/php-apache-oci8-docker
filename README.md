@@ -9,7 +9,8 @@ This installation make use of the very old 10.1.0.5 version of Instant Client pa
 3. Run with `docker run -p 10080:80 --name my-php-oracle -d php-oracle`. "my-php-oracle" is the container name, "php-oracle" is the image name just built.
 
 ## Notes
-apache.conf file contains this section:
+* Apache will start to serve content from /var/www/html folder. Therefore your php app need to be placed here. You can for instance run the container with a  `-v` option, like: `docker run -p 10080:80 -v /srv/data/php-oracle:/var/www/html --name my-php-oracle -d php-oracle`, where /srv/data/php-oracle is a location on your host.
+* apache.conf file contains this section:
 ```
 <Directory /var/www/html>
   <Files report.php>
